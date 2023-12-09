@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html data-theme="{{theme}}">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,user-scalable=no" />
+
+    {% include 'templates/preloads.twig' %}
+    
+    {% if type == 'home' or type == 'archive' %}
+        {% include 'templates/components/swiper.twig' %}
+    {% endif %}
+
+    {#% include 'templates/atf/atf-global.twig' %#}
+
+    <link rel="stylesheet" type="text/css" href="{{base_dir}}/styles/main/main.css?ver={{ version }}" />   {# core #}
+    <link rel="stylesheet" type="text/css" href="{{base_dir}}/styles/theme/style.css?ver={{ version }}" /> {# theme / tailwind #}
+
+    {% include 'templates/components/meta-tags.twig' %}
+
+    {% if wp_head is not empty %}
+    {{ wp_head }}
+    {% endif %}
+
+</head>
+
+
+<body class="{{type}}">
+
+    {#% include 'templates/components/menu-panel.twig' %#}
+
+    <div class="main-container">
+        {#% include 'templates/components/navbar.twig' %#}
+

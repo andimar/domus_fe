@@ -1,0 +1,97 @@
+@use "sass:math";
+
+
+// Breakpoint
+$mobile: "only screen and (max-width : 480px)";
+$tablet: "only screen and (max-width : 600px)";
+$medium: "only screen and (max-width : 780px)";
+$desktop: "only screen and (max-width : 942px)";
+
+
+//Whidth Sizes
+//$boxed: 1400px;
+$boxed: 1140px;
+$contentbox: $boxed;
+$fullwidth: 100%;
+
+
+// Padding
+$pad1: 12px;
+$pad2: $pad1 * 2;
+$pad3: $pad1 * 3;
+$pad4: $pad1 * 4;
+$pad5: $pad1 * 5;
+
+$pad025: math.div($pad1, 4);
+$pad05: math.div($pad1, 2);
+
+$gutter: $pad1;
+
+/* $font: 'Plus Jakarta Sans', sans-serif; */
+$font: 'Signika Negative', sans-serif;
+
+$font-1: $font;
+$font-2: $font;
+
+$font_alt: $font;
+
+
+$bodycolor:     var(--bodycolor);
+$bodycolor_alt: var(--bodycolor_alt);
+$bgcolor:       var(--bgcolor);
+$bgalt:         var(--bgalt);
+$contrast:      var(--contrast);
+$primary:       var(--primary);
+$secondary:     var(--secondary);
+$gray:          var(--gray);
+$lightgray:     var(--lightgray);
+
+$blue: #2d519f;
+
+
+//navbar
+$navbar-height: 84px;
+
+$bradius: 16px;
+
+$text-5: 26.19px;
+$text-4: 22.19px;
+$text-3: 20.16px;
+$text-2: 18px;
+$text-1: 14px;
+$text-0: 11.67px;
+$text-small: 9.72px;
+$text-big: 34.84px;
+$text-heading: 68px;
+
+$regular: 18px;
+
+
+//z-index
+$z0: 0;
+$z1: 100;
+$z2: 200;
+$z3: 300;
+$z4: 400;
+$z5: 500;
+$z6: 600;
+$z7: 700;
+$z8: 800;
+$z9: 900;
+$z10: 999;
+
+$color_shadow: 4px 4px 0 $primary;
+$color_shadow_big: 8px 8px 0 $primary;
+
+@mixin card-shadow {
+  box-shadow: 0 6px 20px rgba(200,220,227,.4);
+}
+
+@mixin big-shadow {
+  box-shadow: 0 8px 16px 0 rgba(20,20,27,.25);
+}
+
+@mixin card-shadow-hover {
+  box-shadow:   0px 4px 8px rgba(115, 115, 115, 0.5);
+}
+

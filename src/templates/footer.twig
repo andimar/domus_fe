@@ -1,0 +1,49 @@
+        <section id="contatti">
+
+        </section>
+
+        <footer>
+            <div class="footer-colophone">
+                &copy; 1987 - {{ "now"|date('Y') }} | {{sitetitle}} <br>
+                Domus Medica Srl            
+            </div>
+
+    {#
+            <div class="subfooter boxed">
+                <br>
+                    <a href="https://www.google.com/maps/place/Centro+Buddhista+%22A.Me.Co.%22/@41.9032683,12.4609884,3a,75y,311.76h,98.93t/data=!3m7!1e1!3m5!1sZUDuuYgK9D59v_qxRNMlnQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DZUDuuYgK9D59v_qxRNMlnQ%26cb_client%3Dsearch.gws-prod.gps%26w%3D86%26h%3D86%26yaw%3D296.735%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192!4m13!1m7!3m6!1s0x132f60677e640001:0x48348d5af8ab68fd!2sVicolo+d'Orfeo,+1,+00193+Roma+RM!3b1!8m2!3d41.9033304!4d12.4608306!3m4!1s0x132f60677fd99c05:0xcc178147c8808db6!8m2!3d41.9033291!4d12.4608883">
+                        Vicolo d'Orfeo, 1 - 00193 Roma (RM)
+                    </a><br>
+                    (a 200 metri da San Pietro)<br>
+                    tel <a href="tel:+39066865148">(+39) 06 68 65 148</a> -  CF 97057150589<br>
+                
+                <div class="footer-logo">
+                    Centro associato a:
+                    <a target="_blank" href="https://unionebuddhistaitaliana.it/">
+                        <img width="180" height="60" loading="lazy" src="{{base_dir}}/assets/images/ubi.svg" alt="Unione Buddhista Italiana">
+                    </a>
+                </div>
+    #}
+                <div class="menu_footer">
+                    <ul>
+                        <li><a href="#">Note Legali</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+
+
+        <script src='{{base_dir}}/scripts/main.js'></script>
+
+        {% if wp_footer is not empty %}
+        {{ wp_footer }}
+        {% endif %}
+
+        {% set GID = '' %}
+
+        </div> {# main-container #}
+    </body>
+</html>

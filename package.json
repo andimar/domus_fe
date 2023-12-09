@@ -1,0 +1,43 @@
+{
+  "name": "domus_fe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "del": "^6.0.0",
+    "flex-grid-lite": "^1.0.1",
+    "fs": "0.0.1-security",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-bump": "^3.2.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-data": "^1.3.1",
+    "gulp-filter": "^7.0.0",
+    "gulp-git": "^2.10.1",
+    "gulp-git-push": "^2.0.0",
+    "gulp-inject-partials": "^1.0.5",
+    "gulp-open": "^3.0.1",
+    "gulp-sass": "^5.0.0",
+    "gulp-tag-version": "^1.3.1",
+    "gulp-terser-js": "^5.2.2",
+    "gulp-twig": "^1.2.0",
+    "sass": "^1.39.2",
+    "terser": "^5.12.1",
+    "swiper": "^7.3.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.andimar/andimar/domus_fe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.andimar/andimar/domus_fe/issues"
+  },
+  "homepage": "https://github.andimar/andimar/domus_fe#readme"
+}

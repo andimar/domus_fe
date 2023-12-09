@@ -1,0 +1,61 @@
+@use "sass:math";
+@import "../main/variables";
+
+
+.global-atf {
+  content: "global-atf";
+}
+
+
+.shape {
+  margin-bottom: -2px !important;
+}
+
+ul.breadcrumbs {
+  list-style-type: none;
+  padding: 0;
+  li {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: $text-0;
+    &:after {
+      content: '/';
+      color: $primary;
+    }
+  }
+  li:last-child:after {
+      content: '';
+  }
+}
+
+.cta_payment {
+  text-align: center;
+  span {
+    font-weight: 700;
+    font-size: $text-2;
+  }
+}
+
+.btn.paypal {
+  background: #fec640;
+  color: $bodycolor;
+  font-weight: 400;
+  font-size: $text-1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 340px;
+  margin: auto;
+  margin-top: $pad1;
+  @media #{$mobile}{
+    max-width: 100%;
+  }
+  &:hover {
+    background: #ffbd22;
+    filter: none;
+  }
+  img {
+    max-width: 90px;
+    margin-left: 12px;
+  }
+}

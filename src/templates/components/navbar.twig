@@ -1,0 +1,58 @@
+<header>
+    <div class="navbar">
+        <a href="/" class="logo">
+          <img width="400" height="120" loading="eager" src="{{base_dir}}/assets/logo.svg" alt="{{sitetitle}}">
+        </a>
+        <div class="menu-desktop">
+          <ul>
+            {% for item in menu.main %}
+                {% if item.childs %}
+                  <li class="dropdown" data-css-dependency="styles/components/partials/dropdown{{version}}.css">
+                    <a href="javascript:void(0);" class="dropdown-toggle">{{ item.title }} <i class="icon-angle-down"></i></a>
+                    <ul class="dropcontent">
+                      {% for child in item.childs %}
+                      <li class="child"><a href='{{ child.url }}'>{{ child.title }}</a></li>
+                      {% endfor %}
+                    </ul>
+                  </li>
+                {% else %}
+                  <li class="menu-item">
+                    <a class="{{ item.class }}" href="{{ item.url }}">{{ item.title }}</a>
+                  </li>
+                {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="ubi_header">
+          <a href="https://unionebuddhistaitaliana.it/" target="_blank" rel="nofollow">
+            <img width="400" height="120" loading="eager" src="{{base_dir}}/assets/images/ubi_black_right.svg" alt="Unione Buddhista Italiana">
+          </a>
+        </div>
+        <div class="menu"><div id="hamburger" aria-haspopup="true" aria-controls="menu-panel" class="menu-icon menu-icon-cross"><span></span></div></div>
+    </div>
+</header>
+
+<script>
+
+(function() {
+    var menu_button = document.querySelector(".menu-icon");
+    var menupanel = document.querySelector('.menu-panel')
+    var menuicon = document.querySelector('.menu-icon');
+
+    menu_button.addEventListener('click' , function() {
+        menupanel.classList.toggle('open');
+        menuicon.classList.toggle('isOpen');
+    })
+
+})();
+
+function closeMenu() {
+  var menupanel = document.querySelector('.menu-panel')
+  var menuicon = document.querySelector('.menu-icon');
+  
+  menuicon.classList.toggle('isOpen');
+  menupanel.classList.remove('open');
+}
+
+
+</script>

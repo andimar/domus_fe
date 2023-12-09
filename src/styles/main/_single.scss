@@ -1,0 +1,94 @@
+.single-post {
+    padding: $pad2 0 $pad4;
+    @media #{$desktop}{
+        padding: $pad2 $pad2 $pad4;
+    }
+    .article-header {
+        h1 {
+            font-size: $text-big;
+            margin-top: 0;
+            margin-bottom: $pad1;
+        }
+    }
+    .single-excerpt {
+        font-size: $text-3;
+    }
+    .article-content {
+        margin-top: $pad2;
+    }
+    .desktop_only {
+        @media #{$desktop}{
+            display: none;
+        }
+    }
+    h2 {
+        font-size: $text-5;
+    }
+    .latest_news {
+        .card-title h2 {
+            font-size: $text-2;
+        }
+        .card-image img {
+            height: 100px;
+        }
+        .card.news p {
+            display: none;
+        }
+    }
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: $text-1;
+    margin: $pad2 auto;
+    a {
+      text-decoration: underline;
+      text-decoration-color: $secondary;
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+
+  table td, table th {
+    border: 1px solid $lightgray;
+    padding: $pad1;
+  }
+
+  table tr:nth-child(odd){background-color: $lightgray;}
+
+  //table tr:hover {background-color: #ddd;}
+
+  table th {
+    padding-top: $pad1;
+    padding-bottom: $pad1;
+    text-align: left;
+    background-color: $lightgray;
+    //color: $secondary;
+  }
+
+
+  .post-content-single {
+    font-size: $regular;
+    p {
+        font-size: $regular;
+    }
+    a {
+        font-size: $regular;
+        text-decoration: underline;
+        text-decoration-color: $primary;
+        &:hover {
+            color: $primary;
+        }
+    }
+  }
+
+  .single-excerpt a {
+    font-size: $regular;
+    text-decoration: underline;
+    text-decoration-color: $primary;
+    &:hover {
+        color: $primary;
+    }
+}

@@ -1,0 +1,62 @@
+<div class="menu-panel" data-css-dependency="styles/components/partials/panels.css">
+    <div class="menu-container">
+        <div class="grid">
+            <div class="col col-12 col-sm">
+                <ul>
+                    {% for item in menu.main %}
+                        {% if item.childs %}
+                        <li class="accordion">
+                            <div class="a-container"> 
+                                <p class="a-btn">{{ item.title }}</p>
+                                <div class="a-panel">
+                                    <div>
+                                        {% for child in item.childs %}
+                                            <div class="col col-sm"><a class="{{child.class}}" href='{{ child.url }}'>{{ child.title }}</a></div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        {% else %}
+                            <li class="menu-item">
+                                <a onclick="closeMenu()" href="{{ item.url }}">{{ item.title }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function initAcc(elem, option){
+        //addEventListener on mouse click
+        document.addEventListener('click', function (e) {
+            //check is the right element clicked
+            if (!e.target.matches(elem+' .a-btn')) return;
+            else{
+                //check if element contains active class
+                if(!e.target.parentElement.classList.contains('active')){
+                    if(option==true){
+                         //if option true remove active class from all other accordions 
+                        var elementList = document.querySelectorAll(elem +' .a-container');
+                        Array.prototype.forEach.call(elementList, function (e) {
+                            e.classList.remove('active');
+                        });
+                    }    
+                    //add active class on cliked accordion     
+                    e.target.parentElement.classList.add('active');
+                }else{
+                    //remove active class on cliked accordion     
+                    e.target.parentElement.classList.remove('active');
+                }
+            }
+        });
+    }
+     
+    //activate accordion function
+    initAcc('.accordion', true);
+</script>

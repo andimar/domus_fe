@@ -1,0 +1,118 @@
+{
+  "type": "home",
+  "home_post_id": 245,
+  "wp_head": {},
+  "wp_footer": {},
+  "mobile": "",
+  "menu": {
+      "main": [
+          {
+              "title": "Promozioni",
+              "url": "#offerte",
+              "class": ""
+          },
+          {
+              "title": "Orari di apertura",
+              "url": "#orari",
+              "class": ""
+          },
+          {
+              "title": "Come raggiungerci",
+              "url": "#dove-siamo",
+              "class": ""
+          },
+          {
+              "title": "Risposte via email",
+              "url": "#risposte",
+              "class": "responses"
+          }
+      ],
+     
+      "home-page-componenti": [],
+      "footer_menu": [
+          {
+              "title": "Cookie policy",
+              "url": "http:\/\/staging.associazioneameco.it\/cookies\/",
+              "class": "",
+              "id": 3508
+          },
+          {
+              "title": "Privacy policy",
+              "url": "http:\/\/staging.associazioneameco.it\/privacy\/",
+              "class": "",
+              "id": 3509
+          },
+          {
+              "title": "Contatti",
+              "url": "http:\/\/staging.associazioneameco.it\/contatti\/",
+              "class": "",
+              "id": 3510
+          }
+      ]
+  },
+
+  "slider": [
+      {
+          "title": "",
+          "subtitle": "",
+          "excerpt": "",
+          "image": "https:\/\/www.analisidomusmedica.it\/wp-content\/uploads\/2016\/11\/cropped-image.jpg",
+          "button": {
+              "cta": "Scopri di più",
+              "icon": "",
+              "class": "",
+              "link": "#"
+          }
+      }
+  ],
+  "about": {
+      "title": "Cos'\u00e8 L'A.Me.Co.",
+      "text": "<p><strong>L&#8217;Associazione per la Meditazione di Consapevolezza<\/strong> \u00e8 stata fondata a Roma nel dicembre 1987 da Corrado Pensa, Neva Papachristou e da altri sei Soci, tutti praticanti nel Dharma e quindi nel 2022 festeggia 35 anni di vita. \u00c8 un ente religioso di fede buddhista di tradizione Therav\u0101da, costituito per testimoniare, coltivare e diffondere, con attenta adesione alle Scritture buddhiste e, al tempo stesso, in spirito interreligioso, il nucleo fondamentale dell\u2019insegnamento del Buddha: le Quattro Nobili Verit\u00e0, la presa di rifugio nel Buddha, nel Dharma e nel Sangha, la legge universale dell\u2019interdipendenza e la pratica della meditazione di consapevolezza vipassan\u0101, rivolta alla purificazione della mente-cuore e al risveglio della saggezza e della compassione.<\/p>\n",
+      "cards": [],
+      "btn1": {
+          "url": "\/chi-siamo\/ ",
+          "cta": "Scopri di pi\u00f9"
+      },
+      "btn2": {
+          "url": "\/come-iscriversi\/",
+          "cta": "Come iscriversi"
+      }
+  },
+  "articles": [
+      {
+          "id": 5827,
+          "title": "Siamo su Instagram!",
+          "excerpt": "",
+          "image": "http:\/\/www.associazioneameco.it\/wp-content\/uploads\/2022\/07\/Instagram2.jpg",
+          "tags": [],
+          "link": "http:\/\/staging.associazioneameco.it\/siamo-su-instagram\/",
+          "categories": [
+              "news"
+          ]
+      },
+      {
+          "id": 5833,
+          "title": "Registrazioni da ascoltare durante l\u2019estate!",
+          "excerpt": "",
+          "image": "http:\/\/www.associazioneameco.it\/wp-content\/uploads\/2022\/07\/Mail-CD.jpg",
+          "tags": [],
+          "link": "http:\/\/staging.associazioneameco.it\/registrazioni-da-ascoltare-durante-lestate-2\/",
+          "categories": [
+              "news"
+          ]
+      },
+      {
+          "id": 5807,
+          "title": "Il 21 Luglio con Andrea Anastasio",
+          "excerpt": "",
+          "image": "http:\/\/www.associazioneameco.it\/wp-content\/uploads\/2019\/01\/andrea2.jpg",
+          "tags": [],
+          "link": "http:\/\/staging.associazioneameco.it\/il-21-luglio-con-andrea-anastasio\/",
+          "categories": [
+              "news"
+          ]
+      }
+  ],
+  
+  "canonical": ""
+}

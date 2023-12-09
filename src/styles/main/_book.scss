@@ -1,0 +1,100 @@
+$book_w: 300px;
+$book_h: 450px;
+$book_r: 3px;
+$page_1: #efece7;
+$page_2: darken($page_1, 20%);
+$page_offset: 3px;
+
+.book-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1300px;
+    margin: $pad4 auto;
+    @media #{$mobile}{
+        margin: $pad5 auto;
+    }
+  }
+  
+  @keyframes initAnimation {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(-18deg);
+    }
+  }
+  
+  .book {
+    width: 300px;
+    height: 450px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(-18deg);
+    transition: 0.5s ease;
+    animation: 1s ease 0s 1 initAnimation;
+  }
+  
+  .book:hover {
+    transform: rotateY(0deg);
+  }
+  
+  .book > :first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+    width: 300px;
+    height: 450px;
+    transform: translateZ(42.5px);
+    background-color: #1b3a74;
+    border-radius: 0 2px 2px 0;
+    box-shadow: 5px 5px 20px #666;
+  }
+  
+  .book::before {
+    position: absolute;
+    content: ' ';
+    background-color: blue;
+    left: 0;
+    top: 1px;
+    width: 83px;
+    height: 448px;
+    transform: translateX(256.5px) rotateY(90deg);
+    background: linear-gradient(90deg, 
+    $page_1 0%,
+    $page_2 5%,
+    $page_1 10%,
+    $page_2 15%,
+    $page_1 20%,
+    $page_2 25%,
+    $page_1 30%,
+    $page_2 35%,
+    $page_1 40%,
+    $page_2 45%,
+    $page_1 50%,
+    $page_2 55%,
+    $page_1 60%,
+    $page_2 65%,
+    $page_1 70%,
+    $page_2 75%,
+    $page_1 80%,
+    $page_2 85%,
+    $page_1 90%,
+    $page_2 95%,
+    $page_1 100%
+      );
+  }
+  
+  .book::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: ' ';
+    width: 300px;
+    height: 450px;
+    transform: translateZ(-42.5px);
+    background-color: #1b3a74;
+    border-radius: 0 2px 2px 0;
+    box-shadow: -10px 0 50px 10px #666;
+  }

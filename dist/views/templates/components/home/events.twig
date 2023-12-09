@@ -1,0 +1,20 @@
+<section class="stripe_section small">
+
+    <div class="boxed">
+        <div class="section-title">
+            <h3>{{events.title}}</h3>
+        </div> 
+        <div class="grid scrollx news">
+            {% for card in events.cards|slice(0,3) %}
+                <div class="col col-4 col-sm inline">
+                    {% include "templates/components/cards/card-events.twig" %}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="buttons more">
+            <a href="{{events.btn1.url}}" class="btn secondary">{{events.btn1.cta}}</a>
+            <a href="{{events.btn2.url}}" class="btn primary">{{events.btn2.cta}}</a>
+        </div>
+    </div>
+
+</section>

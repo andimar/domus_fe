@@ -1,0 +1,20 @@
+{% set version = '0.0.07' %}
+{% set theme = 'light' %}
+
+{# {% set font = 'Plus+Jakarta+Sans' %} #}
+{% set font = 'Montserrat' %}
+
+{% set sitetitle   = 'Analisi Domus Medica' %}
+{% set domain      = 'analisidomusmedica.it' %}
+{% set email       = 'info@analisidomusmedica.it' %}
+{% set siteurl     = 'https://www.analisidomusmedica.it/' %}
+{% set description = 'Laboratorio di analisi cliniche' %}
+{#% set cover       = '/assets/cover.jpg' %#}
+
+{% if base_dir is not defined %}
+    {% set base_dir = '' %}
+{% endif %}
+
+{% include 'templates/header.twig' %}
+{% block page %}{% endblock %}
+{% include 'templates/footer.twig' %}

@@ -1,0 +1,136 @@
+
+.accordion .a-container .a-panel {
+    will-change: max-height;
+    width: 100%;
+    transition: opacity .25s ease;
+    opacity: 0;
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    padding-left: 0;
+}
+
+/* Panel style when active */
+.accordion .a-container.active .a-panel {
+    border-left: 1px solid $primary;
+    opacity: 1;
+    height: auto;
+    max-height: 400px;
+    margin-bottom: $pad1;
+
+    a {
+        color: $bodycolor;
+        font-weight: 400;
+        font-size: $text-2;
+        text-transform: none;
+        line-height: 44px;
+        font-weight: 700;
+    }
+    
+}
+
+
+p.a-btn {
+    font-size: $text-3;
+    line-height: $pad3;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 0;
+    color: $bodycolor;
+    margin: 0;
+    cursor: pointer;
+    @media #{$medium}{
+        font-size:  $text-2;
+    }
+    @media #{$medium}{
+        &:hover {
+            opacity: 1;  
+        }
+    }
+    &:after {
+        font-family: 'ht_icon' !important;
+        content: "\f107";
+        speak: none;
+        font-weight: 700;
+        font-variant: normal;
+        text-transform: none;
+        top: 7px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        display: inline-block;
+        position: absolute;
+        right: -24px;
+        top: -1px;
+        color: $primary;
+        font-size: 1rem;
+        transform: rotate(0);
+    }
+    span {
+        padding-left: 0 !important;
+    }
+}
+
+.a-container.active {
+    .a-btn {
+        &:after {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+section[id^="scheda-tecnica"] {
+    .section-title {
+        @media #{$medium}{
+            margin-top: $pad1;
+            padding: 0;
+        }
+    }
+}
+
+section[class^="infografiche"] {
+    .section-title {
+        @media #{$medium}{
+            padding: 0;
+        }
+    }
+}
+
+.scheda_container {
+    p.a-btn {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 2px;
+        text-transform: uppercase;
+        font-size: $text-1;
+        color: $secondary;
+        padding-left: 20px;
+        text-shadow: none;
+        opacity: 1;
+        &::after {
+            color: $gray;
+            right: initial;
+            left: 0;
+        }
+    }
+    .a-container.active .a-panel {
+        max-height: 640px ;
+        border: 0;
+    }
+    .scheda_title {
+        margin-top: $pad2;
+        margin-bottom: $pad05;
+        padding-bottom: 2px;
+        text-transform: uppercase;
+        font-size: $text-1;
+        color: $secondary;
+        padding-left: 20px;
+    }
+}
+
+.scheda_container {
+
+    .a-container {
+        position: relative;
+    }
+}

@@ -1,0 +1,101 @@
+// Dropdown
+.dropdown {
+    display: inline-block;
+    position: relative;
+  
+    .dropcontent {
+      animation: slide-down .15s ease 1;
+      display: none;
+      left: 0;
+      max-height: 50vh;
+      overflow-y: auto;
+      position: absolute;
+      top: $pad2 + 4px; 
+      list-style-type: none;
+      box-shadow: 0 8px 8px rgba(16, 16, 16, .5);
+      border-radius: 0;
+      padding: $pad1 0;
+      min-width: 180px;
+      background: $bgcolor;
+      @supports (-moz-appearance:none) {
+        scrollbar-width: none;
+      }
+      @media #{$medium}{
+        left: initial;
+        right: 0;
+      }
+      li {
+        padding: $pad05;
+        font-size: $text-1;
+        display: block;
+        font-weight: 700;
+        text-align: left;
+        &:last-of-type {
+          border: 0;
+        }
+        a {
+          text-transform: none;
+          color: $bodycolor;
+          font-weight: 400;
+        }
+        i {
+          margin-right: 12px;
+          min-width: 16px;
+          display: inline-block;
+          text-align: center;
+        }
+        &:hover {
+          a {
+            color: $primary !important;
+          }
+        }
+      }
+    }
+  
+    .dropcontent::-webkit-scrollbar {
+      display: none;
+    }
+  
+    &.dropdown-right {
+      .dropcontent {
+        left: auto;
+        right: 0;
+      }
+    }
+  
+    &.active .dropcontent,
+    .dropdown-toggle:focus + .dropcontent,
+    .dropcontent:hover {
+      display: block;
+    }
+  
+    .category_more a {
+      font-weight: 700 !important;
+      i {
+        vertical-align: -1px;
+        font-weight: 400 !important;
+        font-size: $text-0;
+      }
+    }
+  
+    // Fix dropdown-toggle border radius in button groups
+    .btn-group {
+      .dropdown-toggle:nth-last-child(2) {
+        border-bottom-right-radius: $bradius;
+        border-top-right-radius: $bradius;
+      }
+    }
+  }
+  
+  
+  @keyframes slide-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-$pad1);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

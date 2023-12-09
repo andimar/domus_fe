@@ -1,0 +1,46 @@
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            {% for item in slider %}
+            <div class="swiper-slide">
+                <div class="grid boxed">
+                    <div class="col col-12 col-sm">
+                        <div class="slidetext">
+                            <div class="title" data-swiper-parallax="-400" data-swiper-parallax-duration="800">{{item.title}}</div>
+                            <div class="subtitle" data-swiper-parallax="-500" data-swiper-parallax-duration="800">{{item.subtitle}}</div>
+                            <div class="excerpt" data-swiper-parallax="-500" data-swiper-parallax-duration="800">{{item.excerpt}}</div>
+                            {% if item.button %}
+                            <div class="slide_cta" data-swiper-parallax="-500" data-swiper-parallax-duration="800">
+                                <a target="_blank" class="slide_cta_btn {{item.button.class}}" href="{{item.button.link}}">
+                                    {{item.button.cta}}
+                                </a>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="slideimage">
+                    <img src="{{item.image}}" alt="{{item.title}}">
+                    <div class="overlay"></div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 0,
+            centeredSlides: true,
+            loop: true,
+            parallax: true,
+            effect: 'fade',
+            fadeEffect: {
+            crossFade: true
+            },
+            autoplay: {
+              delay: 6000,
+              disableOnInteraction: false,
+            },
+        });
+    </script>

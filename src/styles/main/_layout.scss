@@ -1,0 +1,423 @@
+html, body { 
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+body {
+    margin: 0;
+    font-family: $font-1;
+    color: $bodycolor;
+}
+
+.boxed {
+    max-width: $boxed;
+    margin: auto;
+}
+
+.stripe_section {
+    padding: 16vh $pad1;
+    @media #{$medium}{
+        padding: 6vh $pad1;
+    }
+    &.colored {
+        background: $gray;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: $bodycolor_alt;
+        position: relative;
+        img, a, h2 {
+            position: relative;
+            z-index: 1;
+        }
+        .overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: rgba(0,0,0,.46);
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+    }
+    &.small {
+        padding: 10vh $pad1;
+        @media #{$medium}{
+            padding: 4vh $pad1;
+        }
+    }
+    &.map {
+        background-size: cover;
+        background-position: right;
+        min-height: 58vh;
+        position: relative;
+        @media #{$medium}{
+            background-size: contain;
+            background-position: top;
+            background-repeat: no-repeat;
+        }
+    }
+    &.events {
+        padding-top: 20vh;
+        @media #{$medium}{
+            padding: 4vh $pad1;
+        }
+    }
+}
+
+.map_content {
+    background: #ffffff;
+    position: absolute;
+    border-radius: 12px;
+    padding: 24px;
+    bottom: -136px;
+    right: 124px;
+    max-width: 500px;
+    @media #{$medium}{
+        position: initial;
+    }
+}
+
+a.chip {
+    font-size: 14px;
+    background: $secondary;
+    color: white;
+    padding: 2px 8px 2px;
+    border-radius: 12px;
+    vertical-align: middle;
+    margin-left: 12px;
+    @media #{$medium}{
+        display: inline-block;
+        margin: 0;
+    }
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $pad2;
+    h3 {
+        margin: 0;
+    }
+}
+
+.section_text {
+    margin-top: 0;
+    margin-bottom: $pad3;
+}
+
+button {
+    --webkit-appearence: none;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.section-title h3 {
+    font-size: 28px;
+    margin-top: 0;
+    font-weight: 700;
+}
+
+.bg_section {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    .overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: rgba(0,0,0,.66);
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+    .boxed {
+        position: relative;
+        z-index: 1;
+        color: $bodycolor_alt;
+    }
+}
+
+section.next-events {
+    margin: $pad3 0;
+    .card-event {
+        margin-bottom: $pad1;
+    }
+}
+
+section.filters {
+    margin-bottom: $pad3;
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media #{$medium}{
+            display: block !important;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+            padding: 0 $pad05;
+            margin: 0;
+            margin-left: -$pad2;
+            margin-right: -$pad2;
+        }
+        li {
+            display: block;
+            margin: 0 $pad05;
+            width: 25%;
+            &:first-of-type {
+                margin-left: 0;
+            }
+            &:last-of-type {
+                margin-right: 0;
+            }
+            @media #{$medium}{
+                vertical-align: top;
+                float: none;
+                display: inline-block;
+                white-space: normal;
+                width: 200px;
+                &:first-of-type {
+                    margin-left: $pad1;
+                }
+            }
+            a {
+                padding: $pad1 $pad2;
+                color: white;
+                border-radius: $bradius;
+                background-color: $primary;
+                display: block;
+                text-align: center;
+                font-weight: 700;
+                &:hover {
+                    @include card-shadow-hover;
+                }
+            }
+        }
+    }
+}
+
+.archive_list { 
+    padding: 0;
+    .card-event {
+        margin-bottom: $pad2;
+    }
+}
+
+
+.post_list {
+    padding: 0 $pad3;
+    width: 100%;
+    max-width: 100vw;
+    @media #{$medium}{
+        padding: 0 $pad2;
+    }
+}
+
+.logo, .section-title h3 {
+    font-family: $font_alt !important;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+section {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.home_hero {
+    position: relative;
+    height: 100%;
+    display: flex;
+    height: 80vh;
+    background-size: cover;
+    background-position: bottom;
+    @media #{$medium}{
+        height: 50vh;
+        display: block;
+    }
+
+    .grid.widget_grid {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: calc(50% - 570px);
+        .donation_widget {
+            z-index: 1;
+            max-width: 380px;
+            padding: $pad4 0;
+            border-radius: $bradius;
+            background: white;
+            @include big-shadow;
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: $bradius;
+            }
+        }
+    }
+}
+
+
+
+
+
+.shape {
+    width: 100%;
+    position: absolute;
+    fill: $bgcolor;
+    margin-top: -4vw;
+    margin-bottom: -2px;
+    height: 4vw;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    @media #{$medium}{
+        display: none;
+    }
+}
+
+
+
+.grid.scrollx {
+    @media #{$medium}{
+        display: block !important;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        padding: 0 $pad05;
+        margin: 0;
+        margin-left: -$pad2;
+        margin-right: -$pad2;
+    }
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    .col.inline {
+        @media #{$medium}{
+            vertical-align: top;
+            float: none;
+            display: inline-block;
+            white-space: normal;
+            width: 158px;
+            &:first-of-type {
+                margin-left: $pad05;
+            }
+        }
+    }
+    &.news {
+        .col.inline {
+            @media #{$medium}{
+                width: 84vw;
+                margin-bottom: $pad05;
+            }
+        }
+    }
+}
+
+
+section.stripe_section.map {
+    @media #{$medium}{
+        padding-top: 30vh;
+        .col {
+            padding: 0;
+            .map_content {
+                padding: $pad2 0 0;
+            }
+        }
+    }
+}
+
+section.about.stripe_section {
+    @media #{$medium}{
+        padding-top: 14vh;
+    }
+}
+
+footer {
+    background: $bgalt;
+    padding: 8vh 0;
+    color: $contrast;
+    .footer-colophone {
+        margin: auto;
+        font-size: $text-3;
+        text-align: center;
+        padding: 0 $pad2;
+        font-weight: 700;
+    }
+}
+
+.subfooter {
+    text-align: center;
+    a {
+        color: $bodycolor_alt;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .footer-logo {
+        text-align: center;
+        margin: $pad2 auto;
+        a {
+            display: block;
+            img {
+                margin-top: $pad2;
+            }
+        }
+    }
+}
+
+.menu_footer {
+    margin: auto;
+    max-width: 800px;
+    ul {
+        list-style-type: none;
+        text-align: center;
+        padding: 0;
+        li {
+            margin: $pad1 $pad1 0;
+            display: inline-block;
+            a {
+                color: $bodycolor_alt;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.ottopermille {
+    h2 {
+        margin-top: 0;
+        font-size: $text-big;
+    }
+    img {
+        @media #{$medium}{
+            margin: $pad1 auto;
+            width: 100px;
+            height: 120px;
+        }
+    }
+    .btn {
+        max-width: 400px;
+        font-size: $text-1;
+    }
+}
+
+.hp_box {
+    padding: $pad4;
+    //background: #f2f2f2;
+    border-radius: $bradius;
+    @include card-shadow;
+    border: 2px solid;
+    border-color: var(--secondary);
+}

@@ -1,0 +1,30 @@
+<section class="stripe_section small">
+
+    <div class="boxed">
+        
+
+        {% include "templates/components/section_title.twig" with {
+            'title': audio.title,
+            'slider_id': 'audio',
+            'controls': true
+            
+        } %}
+
+        <p class="section_text">
+            {{audio.text}}
+        </p>
+
+        {% include "templates/components/carousel.twig" with {
+            'slider_id': 'audio', 
+            'loop': audio.cards,
+            'slides_per_view': 3,
+            'component': 'card-audio'
+        } %}
+
+        <div class="buttons more">
+            <a href="{{audio.btn1.url}}" class="btn secondary">{{audio.btn1.cta}}</a>
+            <a href="{{audio.btn2.url}}" class="btn primary">{{audio.btn2.cta}}</a>
+        </div>
+    </div>
+
+</section>

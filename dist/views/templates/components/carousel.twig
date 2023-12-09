@@ -1,0 +1,44 @@
+<div id="slider_{{slider_id}}" class="swiper">
+    <div class="swiper-wrapper">
+      {% for card in loop %}
+      <div class="swiper-slide">
+        {% include 'templates/components/cards/'~ component ~'.twig' %}
+      </div>
+      {% endfor %}
+    </div>
+</div>
+
+<script>
+  (function (){
+    var slides_per_view = '{{slides_per_view}}';
+    var swiper = new Swiper('#slider_{{slider_id}}', {
+
+      loop: false,
+      speed: 400,
+      spaceBetween: 24,
+      slidesPerView: 6,
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+        // when window width is >= 640px
+        640: {
+          slidesPerView: 3,
+        },
+        980: {
+          slidesPerView: slides_per_view,
+        }
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+
+      navigation: {
+        nextEl: '#slidenext_{{slider_id}}',
+        prevEl: '#slideback_{{slider_id}}',
+      },
+
+    });
+  })();
+</script>

@@ -1,0 +1,30 @@
+<section class="stripe_section small">
+
+    <div class="boxed">
+        <div class="section-title">
+            <h3>Notizie</h3>
+        </div>
+
+        {% if mobile %}
+            <div class="grid scrollx news">
+                {% for card in articles|slice(0,4) %}
+                    <div class="col col-6 col-sm inline">
+                        {% include "templates/components/cards/card-news.twig" %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="grid">
+                
+                    {% for card in articles|slice(0,6) %}
+                    <div class="col col-6 col-sm">
+                        {% include "templates/components/cards/card-news.twig" %}
+                    </div>
+                    {% endfor %}
+                
+            </div>
+        {% endif %}
+    </div>
+
+</section>
+

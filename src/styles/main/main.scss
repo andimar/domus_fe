@@ -1,0 +1,36 @@
+@use "ht_icon.css"; 
+
+:root {
+  --bgcolor:       hsl(0, 0%, 100%);
+  --bgalt:         #1d1a2e;
+  --bodycolor:     #1d1a2e;
+  --bodycolor_alt: #fff;
+  --primary:       #d37a22;
+  --secondary:     #52837f;
+  --gray:          #64748b;
+  --lightgray:     #e8eaed;
+  //--secondary:     #6b021c;
+  --contrast:      #f7f7f7;
+}
+
+[data-theme="dark"] {
+  --bgcolor:       #2f2e41;
+  --bodycolor:     #fff;
+  --bodycolor_alt: #2f2e41;
+  --primary:       #009ee2;
+  --secondary:     #adbbc7;
+  --contrast:      #dbe1e6;
+}
+
+@import "variables";
+@import "grid";
+@import "navbar";
+@import "layout";
+@import "slider";
+@import "typography";
+@import "cards";
+@import "dropdown";
+@import "accordion";
+@import "single";
+
+

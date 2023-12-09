@@ -1,0 +1,28 @@
+<section class="stripe_section small">
+
+    <div class="boxed">
+
+        {% include "templates/components/section_title.twig" with {
+            'title': magazine.title,
+            'slider_id': 'magazine',
+            'controls': true
+        } %}
+
+        <p class="section_text">
+            {{magazine.text}}
+        </p>
+
+        {% include "templates/components/carousel.twig" with {
+            'slider_id': 'magazine', 
+            'loop': magazine.cards,
+            'slides_per_view': 4,
+            'component': 'card-magazine'
+        } %}
+
+        <div class="buttons more">
+            <a href="{{magazine.btn1.url}}" class="btn secondary">{{magazine.btn1.cta}}</a>
+            <a href="{{magazine.btn2.url}}" class="btn primary">{{magazine.btn2.cta}}</a>
+        </div>
+    </div>
+
+</section>
