@@ -1,0 +1,76 @@
+:root[data-palette=azzurro]{--palette-deep:#005a85;--deep:#005a85}
+:root[data-palette=navy]{--palette-deep:#152b50;--deep:#152b50}
+:root[data-palette=tenue]{--palette-deep:#e1f1fa;--deep:#153e50}
+html[data-palette] body[data-layout=obliqua] .visit-section{--section-fill:var(--palette-deep)}
+html[data-palette=tenue] body[data-layout=obliqua] .utility-bar{background:#edf7fc;color:#153e50}
+html[data-palette=tenue] body[data-layout=obliqua] .visit-section{color:#153e50}
+html[data-palette=tenue] body[data-layout=obliqua] .visit-section :is(h2,h3){color:#153e50}
+html[data-palette=tenue] body[data-layout=obliqua] .visit-section .text-button{color:#005a85}
+html[data-palette=tenue] body[data-layout=obliqua] .visit-steps p{color:#315569}
+html[data-palette=tenue] body[data-layout=obliqua] .opening-section{--section-fill:#fff}
+html[data-palette=tenue] body[data-layout=obliqua] .site-footer{background:#edf7fc}
+/* Selected system: one blue, mixed only with achromatic white/grey/black. */
+:root[data-palette=tenue]{
+ --brand-blue:#009fe3;
+ --blue-04:color-mix(in srgb,var(--brand-blue) 4%,white);
+ --blue-06:color-mix(in srgb,var(--brand-blue) 6%,white);
+ --blue-10:color-mix(in srgb,var(--brand-blue) 10%,white);
+ --blue-18:color-mix(in srgb,var(--brand-blue) 18%,white);
+ --blue-border:color-mix(in srgb,var(--brand-blue) 28%,white);
+ --blue-action:color-mix(in srgb,var(--brand-blue) 75%,black);
+ --blue-link:color-mix(in srgb,var(--brand-blue) 66%,black);
+ --blue-ink:color-mix(in srgb,var(--brand-blue) 22%,#202020);
+ --blue-copy:color-mix(in srgb,var(--brand-blue) 18%,#484848);
+ --blue-muted:color-mix(in srgb,var(--brand-blue) 16%,#626262);
+ --sand-faq:#faf1d2;
+ --ink:var(--blue-ink);--muted:var(--blue-muted);--deep:var(--blue-ink);--teal:var(--blue-action);--turquoise:var(--brand-blue);
+ --mint:var(--blue-10);--ivory:var(--sand-faq);--line:var(--blue-border);
+ --border-soft:var(--blue-18);--border-strong:var(--blue-border);--border-accent:var(--blue-18);
+ --soft-copy:var(--blue-muted);--card-copy:var(--blue-copy);--palette-deep:var(--blue-10);
+ --dock-bg:var(--blue-06);--dock-line:var(--blue-border);--dock-hover:var(--blue-18);
+ scrollbar-color:var(--blue-border) var(--blue-04);
+}
+html[data-palette=tenue] body[data-layout=obliqua] :is(.hero,.notice-banner){--section-fill:var(--blue-06)}
+html[data-palette=tenue] body[data-layout=obliqua] .notice-banner{background:var(--blue-06)}
+html[data-palette=tenue] body[data-layout=obliqua] .utility-bar{background:var(--blue-04);color:var(--blue-ink)}
+html[data-palette=tenue] body[data-layout=obliqua] .visit-section{--section-fill:var(--blue-10);color:var(--blue-ink)}
+html[data-palette=tenue] body[data-layout=obliqua] .visit-section :is(h2,h3){color:var(--blue-ink)}
+html[data-palette=tenue] body[data-layout=obliqua] .visit-steps p{color:var(--blue-copy)}
+html[data-palette=tenue] body[data-layout=obliqua] .faq-section{--section-fill:var(--sand-faq)}
+html[data-palette=tenue] body[data-layout=obliqua] .faq-list details{background:transparent}
+html[data-palette=tenue] body[data-layout=obliqua] :is(.package-card,.single-tags .tag){background:var(--blue-10);border-color:var(--blue-18)}
+html[data-palette=tenue] body[data-layout=obliqua] :is(.package-visual h3,.package-visual h3 a,.package-price){color:var(--blue-ink)}
+html[data-palette=tenue] body[data-layout=obliqua] :is(.text-button,.round-arrow,.eyebrow,.notice-details){color:var(--blue-link)}
+html[data-palette=tenue] body[data-layout=obliqua] .button-primary{background:var(--blue-action);color:#fff}
+html[data-palette=tenue] body[data-layout=obliqua] .filter-button.is-active{background:var(--blue-action);border-color:var(--blue-action);color:#fff}
+html[data-palette=tenue] body[data-layout=obliqua] .opening-section :is(h2,h3,h4,dd){color:var(--blue-ink)}
+html[data-palette=tenue] body[data-layout=obliqua] .opening-section :is(dt,small){color:var(--blue-muted)}
+html[data-palette=tenue] body[data-layout=obliqua] .site-footer{background:var(--blue-06)}
+html[data-palette=tenue] body[data-layout=obliqua] .footer-top h2{color:var(--blue-ink)}
+
+/* Requested dark close: the same brand hue, almost black, with one shaped edge. */
+html[data-palette=tenue] body[data-layout=obliqua] .site-footer{--footer-dark:color-mix(in srgb,var(--brand-blue) 12%,#080d10);position:relative;margin-top:36px;padding-top:48px;background:var(--footer-dark);color:#f3faff}
+html[data-palette=tenue] body[data-layout=obliqua] .site-footer::before{content:'';position:absolute;left:0;right:0;top:-35px;height:36px;background:var(--footer-dark);mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 36' preserveAspectRatio='none'%3E%3Cpath d='M0 30C360 30 440 0 760 0S1160 28 1440 10V36H0Z'/%3E%3C/svg%3E") center/100% 100% no-repeat;pointer-events:none}
+html[data-palette=tenue] body[data-layout=obliqua] .site-footer :is(h2,a,.footer-link){color:#f3faff}
+html[data-palette=tenue] body[data-layout=obliqua] .site-footer :is(p,.footer-bottom,.image-disclosure){color:#c8dce5}
+html[data-palette=tenue] body[data-layout=obliqua] .footer-brand img{filter:none}
+html[data-palette=tenue] body[data-layout=obliqua] .footer-bottom{border-color:#42606d}
+html[data-palette=tenue] body[data-layout=obliqua] .site-footer a:hover{color:#fff;text-decoration:underline}
+html[data-palette=tenue] body[data-layout=obliqua] .site-footer a:focus-visible{outline-color:#b8eaff}
+html[data-palette=tenue] body[data-layout=obliqua] .review-dock :is(a,button){color:var(--blue-ink)}
+html[data-palette=tenue] body[data-layout=obliqua] :is(a,button,summary):focus-visible{outline-color:var(--blue-link)}
+html[data-palette=tenue] body[data-layout=obliqua] ::selection{background:var(--blue-18);color:var(--blue-ink)}
+html[data-palette=tenue] #contatti{--contact-ink:var(--blue-ink);--contact-muted:var(--blue-muted);--contact-line:var(--blue-border);--contact-link:var(--blue-link);--contact-soft:var(--blue-06)}
+html[data-palette=tenue] #contatti .route-choice input:checked+span{background:var(--blue-action);border-color:var(--blue-action);color:#fff}
+html[data-palette=tenue] #contatti .route-choice input:focus-visible+span{outline-color:var(--blue-link)}
+html[data-palette=tenue] #contatti .route-controls .route-button{background:var(--blue-action);color:#fff}
+html[data-palette=tenue] #contatti .address-card{background:var(--blue-06)}
+html[data-palette=tenue] #contatti .address-content :is(h3,p){color:var(--blue-ink)}
+html[data-palette=tenue] #contatti .address-content .transport-note{color:var(--blue-muted)}
+:root[data-palette=tenue]{--ivory:#fff;--warm:var(--blue-06)}
+html[data-palette=tenue] body[data-layout=obliqua] .utility-inner a:hover{color:var(--blue-link)}
+html[data-palette=tenue] body[data-layout=obliqua] .round-arrow:hover{background:var(--blue-action);border-color:var(--blue-action);color:#fff}
+html[data-palette=tenue] body[data-layout=obliqua] .button-primary:hover{background:var(--blue-link)}
+html[data-palette=tenue] body[data-layout=obliqua] .filter-button:not(.is-active):hover{background:var(--blue-06)}
+html[data-palette=tenue] #contatti .route-controls .route-button:hover{background:var(--blue-link)}
+html[data-palette=tenue] #contatti .route-choice:hover span{border-color:var(--blue-link)}

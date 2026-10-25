@@ -1,0 +1,22 @@
+{% extends 'layout.twig' %}
+{% block content %}
+<div class="domus-container domus-inner">
+<nav class="domus-breadcrumb" aria-label="Percorso"><a href="{{ site.url }}">Home</a><span aria-hidden="true"> / </span><span>{{ page.type == '404' ? 'Pagina non trovata' : (page.type in ['single', 'page'] ? posts[0].title : page.heading) }}</span></nav>
+{% if page.type == '404' %}
+<h1>Pagina non trovata</h1><p>La pagina richiesta non è disponibile.</p><a class="domus-read-more" href="{{ site.url }}">Torna alla homepage →</a>
+{% elseif page.type in ['single', 'page'] %}
+{% for post in posts %}<article class="domus-article"><h1>{{ post.title }}</h1><div class="domus-entry-content">{{ post.content_html|raw }}</div><p class="domus-back"><a href="{{ site.url }}#offerte">← Torna alla homepage</a></p></article>{% endfor %}
+{% else %}
+<h1>{{ page.heading }}</h1><div class="domus-archive-list">
+{% for post in posts %}<article><h2><a href="{{ post.url }}">{{ post.title }}</a></h2>{% if post.image_html %}<a href="{{ post.url }}">{{ post.image_html|raw }}</a>{% endif %}{{ post.excerpt_html|raw }}<a class="domus-read-more" href="{{ post.url }}">Leggi di più →</a></article>{% else %}<p>Nessun contenuto trovato.</p>{% endfor %}
+</div>{{ pagination_html|raw }}
+{% endif %}
+{% if related %}
+<section class="domus-related" aria-labelledby="domus-related-title">
+<h2 id="domus-related-title">Articoli correlati</h2>
+<div class="domus-archive-list">
+{% for post in related %}<article class="domus-related-card"><a href="{{ post.url }}">{% if post.image_html %}{{ post.image_html|raw }}{% endif %}<h3>{{ post.title }}</h3></a></article>{% endfor %}
+</div></section>
+{% endif %}
+</div>
+{% endblock %}

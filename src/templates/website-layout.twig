@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="{{ site.language }}" data-theme="turchese" data-palette="tenue" data-appearance="light" data-font-study="" data-study-heading="newsreader" data-study-text="source" data-study-price="georgia">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">{{ wordpress.wp_head|raw }}</head>
+<body class="{{ body_classes }} domus-website" data-page="{{ page.type }}" data-layout="obliqua" data-variant="{{ layout }}">
+{{ wordpress.wp_body_open|raw }}<a class="skip-link" href="#contenuto">Vai al contenuto</a>
+{% include 'website/header.twig' %}
+{% if notice %}<aside class="notice-banner"><div class="container notice-inner"><div class="notice-copy"><p><strong>{{ notice.title }}</strong> {{ notice.date_label }}</p></div><a class="notice-details" href="{{ notice.url }}">Leggi avviso →</a></div></aside>{% endif %}
+<main id="contenuto">{% block content %}{% endblock %}</main>
+{% include 'website/footer.twig' %}
+{% if page.type == 'home' %}<script type="application/json" id="domus-photo-data">{{ photo_data_json|raw }}</script>{% endif %}
+{{ wordpress.wp_footer|raw }}</body></html>

@@ -1,0 +1,18 @@
+{
+  "page": {
+    "type": "page",
+    "title": "Esempio"
+  },
+  "site": {
+    "name": "Analisi Domus Medica",
+    "url": "/",
+    "language": "it-IT"
+  },
+  "posts": [],
+  "pagination_html": "",
+  "wordpress": {
+    "wp_head": "",
+    "wp_body_open": "",
+    "wp_footer": ""
+  }
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "package": "base",
+    "page": "https://www.analisidomusmedica.it/pacchetto-analisi-base-16-esami-35eu/",
+    "image": "https://www.analisidomusmedica.it/wp-content/uploads/2021/10/copertina_analisiclinichevera-1024x440-750x419.jpg",
+    "local": "assets/images/pacchetti/checkup.jpg",
+    "note": "Copia invariata dell’immagine associata al pacchetto, dalla copia locale del sito."
+  },
+  {
+    "package": "donna",
+    "page": "https://www.analisidomusmedica.it/pacchetto-donna/",
+    "image": "https://www.analisidomusmedica.it/wp-content/uploads/2022/11/woman-750x419.jpg",
+    "local": "assets/images/pacchetti/donna.jpg",
+    "note": "Copia invariata dell’immagine associata al pacchetto, dalla copia locale del sito."
+  },
+  {
+    "package": "osteoporosi",
+    "page": "https://www.analisidomusmedica.it/pacchetto-osteoporosi/",
+    "image": "https://www.analisidomusmedica.it/wp-content/uploads/2022/11/osteoporosi-750x419.jpg",
+    "local": "assets/images/pacchetti/osteoporosi.jpg",
+    "note": "Copia invariata dell’immagine associata al pacchetto, dalla copia locale del sito."
+  },
+  {
+    "package": "anemia",
+    "page": "https://www.analisidomusmedica.it/pacchetto-anemia/",
+    "image": "https://www.analisidomusmedica.it/wp-content/uploads/2022/11/anemia-750x419.jpg",
+    "local": "assets/images/pacchetti/anemia.jpg",
+    "note": "Copia invariata dell’immagine associata al pacchetto, dalla copia locale del sito."
+  },
+  {
+    "package": "plus",
+    "page": "https://www.analisidomusmedica.it/pacchetto-analisi-plus-18-esami-50eu/",
+    "image": "https://www.analisidomusmedica.it/wp-content/uploads/2021/10/copertina_analisiclinichevera-1024x440-750x419.jpg",
+    "local": "assets/images/pacchetti/checkup.jpg",
+    "note": "Copia invariata dell’immagine associata al pacchetto, dalla copia locale del sito."
+  },
+  {
+    "package": "coagulazione",
+    "page": "https://www.analisidomusmedica.it/pacchetto-coagulazione/",
+    "image": "https://www.analisidomusmedica.it/wp-content/uploads/2022/11/coagulazione-750x419.jpg",
+    "local": "assets/images/pacchetti/coagulazione.jpg",
+    "note": "Copia invariata dell’immagine associata al pacchetto, dalla copia locale del sito."
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "diretti": {
+    "label": "Diretti",
+    "fields": {
+      "hero_title": "Analisi cliniche,\na Centocelle.",
+      "hero_description": "Consulta i pacchetti, gli orari dei prelievi e i contatti del laboratorio.",
+      "hero_button": "Vedi i pacchetti",
+      "desk_title": "Per la tua visita.",
+      "call_label": "Chiama il laboratorio",
+      "packages_title": "Pacchetti e prezzi.",
+      "packages_intro": "Per ogni pacchetto trovi gli esami inclusi e il prezzo riportato nella scheda.",
+      "contact_text": "Siamo in Via dei Castani, 170, a Roma. Per informazioni sugli esami e sulle modalità di accesso puoi rivolgerti alla segreteria.\n\nSul sito puoi consultare i pacchetti e i contatti, oppure accedere al servizio dei referti online."
+    }
+  },
+  "accoglienti": {
+    "label": "Accoglienti",
+    "fields": {
+      "hero_title": "La tua salute,\nin buone mani.",
+      "hero_description": "Prima di venire, puoi trovare qui pacchetti, orari e contatti. Se hai una domanda, chiamaci: la segreteria è a disposizione.",
+      "hero_button": "Scopri i pacchetti",
+      "desk_title": "Prima di venire.",
+      "call_label": "Parla con la segreteria",
+      "packages_title": "Trova il tuo pacchetto.",
+      "packages_intro": "Leggi gli esami inclusi e il prezzo di ogni pacchetto. Per una domanda, la segreteria è a disposizione.",
+      "contact_text": "Ogni visita può cominciare da una domanda. Se cerchi informazioni sugli esami o sull’accesso al laboratorio, la segreteria è qui per aiutarti.\n\nCi trovi in Via dei Castani, 170, a Roma. Sul sito trovi gli orari, i pacchetti e il collegamento ai referti online."
+    }
+  },
+  "essenziali": {
+    "label": "Essenziali",
+    "fields": {
+      "hero_title": "Analisi cliniche.\nDomus Medica.",
+      "hero_description": "Roma, Centocelle. Pacchetti di analisi, orari e referti online.",
+      "hero_button": "Pacchetti",
+      "desk_title": "Orari e servizi.",
+      "call_label": "Chiama",
+      "packages_title": "Pacchetti di analisi.",
+      "packages_intro": "Esami inclusi e prezzo, nella scheda di ogni pacchetto.",
+      "contact_text": "Il laboratorio di analisi a Centocelle, in Via dei Castani 170.\n\nInformazioni sugli esami e sull’accesso: 06 23 11 843."
+    }
+  }
+}

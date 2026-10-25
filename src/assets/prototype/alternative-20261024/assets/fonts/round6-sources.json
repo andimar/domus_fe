@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-25",
+  "fonts": [
+    {
+      "name": "Bricolage Grotesque",
+      "source": "https://github.com/google/fonts/tree/main/ofl/bricolagegrotesque",
+      "author": "https://ateliertriay.github.io/bricolage/",
+      "file": "bricolage-variable.ttf",
+      "license": "bricolage-OFL.txt"
+    },
+    {
+      "name": "Public Sans",
+      "source": "https://github.com/google/fonts/tree/main/ofl/publicsans",
+      "file": "publicsans-variable.ttf",
+      "license": "publicsans-OFL.txt"
+    }
+  ]
+}

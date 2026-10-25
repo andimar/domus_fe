@@ -1,20 +1,7 @@
-{% set version = '0.0.07' %}
-{% set theme = 'light' %}
-
-{# {% set font = 'Plus+Jakarta+Sans' %} #}
-{% set font = 'Montserrat' %}
-
-{% set sitetitle   = 'Analisi Domus Medica' %}
-{% set domain      = 'analisidomusmedica.it' %}
-{% set email       = 'info@analisidomusmedica.it' %}
-{% set siteurl     = 'https://www.analisidomusmedica.it/' %}
-{% set description = 'Laboratorio di analisi cliniche' %}
-{#% set cover       = '/assets/cover.jpg' %#}
-
-{% if base_dir is not defined %}
-    {% set base_dir = '' %}
-{% endif %}
-
-{% include 'templates/header.twig' %}
-{% block page %}{% endblock %}
-{% include 'templates/footer.twig' %}
+<!doctype html>
+<html lang="{{ site.language }}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">{{ wordpress.wp_head|raw }}</head>
+<body class="{{ body_classes|default('') }}">{{ wordpress.wp_body_open|raw }}
+{% if branding is defined %}{% include 'components/header.twig' %}{% else %}<header><a href="{{ site.url }}">{{ site.name }}</a></header>{% endif %}
+<main>{% block content %}{% endblock %}</main>
+{% if footer is defined %}{% include 'components/footer.twig' %}{% endif %}
+{{ wordpress.wp_footer|raw }}</body></html>

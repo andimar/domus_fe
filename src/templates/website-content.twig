@@ -1,0 +1,13 @@
+{% extends 'website-layout.twig' %}
+{% block content %}
+<div class="container content-page"><nav class="breadcrumb" aria-label="Percorso"><a href="{{ site.url }}">Home</a><span aria-hidden="true">/</span><span>{{ current.title|default(page.heading) }}</span></nav>
+{% if page.type == '404' %}<h1>Pagina non trovata</h1><p>La pagina richiesta non è disponibile.</p><a class="button button-primary" href="{{ site.url }}">Torna alla home</a>
+{% elseif current %}
+<article class="content-article"><header class="content-heading"><div><p class="eyebrow">{{ current.type == 'post' ? current.group_label : (current.type == 'avvisi' ? 'Avviso' : (current.type == 'altri-servizi' ? 'Altri servizi' : 'Domus Medica')) }}</p><h1>{{ current.title }}</h1>{% if current.type == 'post' %}<p class="single-lead">{{ current.summary }}</p>{% endif %}{% if current.price is not null %}<div class="single-inline-price"><span>€</span><strong>{{ current.price_whole }}</strong><span>,{{ current.price_decimal }}</span></div>{% endif %}{% if current.date_label %}<p class="notice-validity">{{ current.date_label }}{% if not current.is_active %} · Avviso non attivo{% endif %}</p>{% endif %}{% if current.booking %}<p>Servizio su prenotazione. <a href="{{ settings.phone_href }}">Chiama {{ settings.phone }}</a></p>{% endif %}</div>{% if current.type != 'avvisi' and current.image.url %}<img src="{{ current.image.url }}" alt="{{ current.image.alt }}" width="750" height="460">{% endif %}</header>
+{% if current.type == 'post' and current.tests %}<section class="structured-tests"><h2>Esami inclusi</h2>{% if current.test_count_label %}<p>{{ current.test_count_label }} secondo la scheda del laboratorio. Le eventuali opzioni sono riportate nel testo completo.</p>{% endif %}<ul class="tests-list">{% for test in current.tests %}<li>{{ test }}</li>{% endfor %}</ul></section>{% endif %}
+<div class="entry-content">{{ current.content_html|raw }}</div>
+{% if current.type in ['post','altri-servizi'] %}<div class="content-call"><a class="button button-primary" href="{{ settings.phone_href }}">Chiedi informazioni</a><a class="text-button" href="{{ site.url }}#orari">Orari e avvisi →</a></div>{% endif %}
+</article>
+{% else %}<div class="section-heading"><h1>{{ page.heading }}</h1></div><div class="archive-grid">{% for item in listing %}<article><h2><a href="{{ item.url }}">{{ item.title }}</a></h2>{% if item.date_label %}<p>{{ item.date_label }}</p>{% endif %}<p>{{ item.summary }}</p><a class="text-button" href="{{ item.url }}">Leggi →</a></article>{% else %}<p>Nessun contenuto trovato.</p>{% endfor %}</div>{{ pagination_html|raw }}{% endif %}
+</div>
+{% endblock %}

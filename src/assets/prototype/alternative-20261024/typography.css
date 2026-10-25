@@ -1,0 +1,9 @@
+@font-face{font-family:Literata;src:url('assets/fonts/literata.ttf') format('truetype');font-weight:200 900;font-display:swap}
+@font-face{font-family:Manrope;src:url('assets/fonts/manrope.ttf') format('truetype');font-weight:200 800;font-display:swap}
+@font-face{font-family:'Source Sans 3';src:url('assets/fonts/source-sans-3.ttf') format('truetype');font-weight:200 900;font-display:swap}
+html[data-type=literata]{--serif:Literata,Georgia,serif;--font:'Source Sans 3',Lato,sans-serif}
+html[data-type=manrope]{--serif:Manrope,Lato,sans-serif;--font:'Source Sans 3',Lato,sans-serif}
+html[data-type=literata] :is(.hero h1,.laboratory-copy h2,.section-heading h2,.faq-grid h2,.single-hero-grid h1,.service-desk h2){font-family:var(--serif);font-weight:400;letter-spacing:-.03em}
+html[data-type=manrope] :is(.hero h1,.laboratory-copy h2,.section-heading h2,.faq-grid h2,.single-hero-grid h1,.service-desk h2){font-family:var(--serif);font-weight:500;letter-spacing:-.035em}
+/* The user pinned the original package cards, including their typography. */
+.package-card{--serif:Georgia,'Times New Roman',serif;--font:Lato,Arial,sans-serif;font-family:var(--font)}

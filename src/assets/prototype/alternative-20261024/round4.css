@@ -1,0 +1,16 @@
+@font-face{font-family:'Red Hat Display';src:url('assets/fonts/red-hat-display.ttf') format('truetype');font-weight:300 900;font-display:swap}
+@font-face{font-family:'Red Hat Text';src:url('assets/fonts/red-hat-text.ttf') format('truetype');font-weight:300 700;font-display:swap}
+@font-face{font-family:Newsreader;src:url('assets/fonts/newsreader.ttf') format('truetype');font-weight:200 800;font-display:swap}
+html[data-type=redhat]{--serif:'Red Hat Display',Lato,sans-serif;--font:'Red Hat Text',Lato,sans-serif}
+html[data-type=newsreader]{--serif:Newsreader,Georgia,serif;--font:Lato,Arial,sans-serif}
+html[data-type=redhat] :is(.hero h1,.laboratory-copy h2,.section-heading h2,.faq-grid h2,.single-hero-grid h1,.service-desk h2){font-family:var(--serif);font-weight:600;letter-spacing:-.03em}
+html[data-type=newsreader] :is(.hero h1,.laboratory-copy h2,.section-heading h2,.faq-grid h2,.single-hero-grid h1,.service-desk h2){font-family:var(--serif);font-weight:400;letter-spacing:-.025em}
+body:is([data-layout=ritmo],[data-layout=sfumature]) .hero-image{animation:none}
+body:is([data-layout=ritmo],[data-layout=sfumature]) .hero-actions{gap:22px}
+body:is([data-layout=ritmo],[data-layout=sfumature]) .hero-actions .text-button{min-height:44px}
+body[data-layout=ritmo] .opening-section{background:#fff}
+body[data-layout=ritmo] .opening-section .hours-card{padding:32px}
+@media(max-width:700px){body[data-layout=ritmo] .opening-section .hours-card{padding:24px}}
+@media(max-width:370px){body[data-layout=ritmo] .opening-section .hours-card{padding:20px}body[data-layout=ritmo] .opening-section .hours-block dl>div{display:block}}
+@media(max-width:700px){body:is([data-layout=ritmo],[data-layout=sfumature]) .hero-actions{gap:12px}body:is([data-layout=ritmo],[data-layout=sfumature]) .hero-actions .button{font-size:14px;padding-inline:16px;gap:10px}body:is([data-layout=ritmo],[data-layout=sfumature]) .hero-actions .text-button{font-size:14px}}
+@media(max-width:370px){body:is([data-layout=ritmo],[data-layout=sfumature]) .hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px}body:is([data-layout=ritmo],[data-layout=sfumature]) .hero-actions .button{grid-column:1/-1;justify-self:start}}

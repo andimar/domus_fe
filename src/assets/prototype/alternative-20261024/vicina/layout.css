@@ -1,0 +1,20 @@
+@import url('../obliqua/layout.css');
+body[data-variant=vicina] .hero-grid{display:grid;grid-template-columns:1.08fr 1fr;gap:clamp(40px,6vw,92px);align-items:center}
+body[data-variant=vicina] .hero-visual{padding:0;min-width:0}
+body[data-variant=vicina] .hero-image-wrap{height:540px;border-radius:72px 8px 8px 8px}
+body[data-variant=vicina] .hero-image{object-position:44% center}
+body[data-variant=vicina] .hero-copy{padding:0;min-width:0}
+body[data-variant=vicina] .hero h1{font-size:clamp(46px,4.4vw,64px);line-height:1.12;max-width:12ch;margin-bottom:24px}
+body[data-variant=vicina] .hero-description{font-size:18px;line-height:1.7;max-width:39ch}
+body[data-variant=vicina] .hero-actions{gap:14px 24px;flex-wrap:wrap}
+body[data-variant=vicina] .hero-facts{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:32px 0 0;padding-top:24px;border-top:1px solid var(--blue-border)}
+body[data-variant=vicina] .hero-facts a{display:flex;flex-direction:column;gap:7px;text-decoration:none;font-size:15px;min-height:56px}
+body[data-variant=vicina] .hero-facts strong{font-size:18px;line-height:1.4;color:var(--ink)}
+body[data-variant=vicina] .hero-facts span{font-size:14px;line-height:1.5;color:var(--muted)}
+body[data-variant=vicina] .hero-facts a:hover strong{text-decoration:underline;text-underline-offset:4px}
+body[data-variant=vicina] .hero-accreditation{margin-top:24px;font-size:13px}
+body[data-variant=vicina] .section-heading h2,body[data-variant=vicina] .faq-grid h2{font-size:clamp(36px,3.2vw,46px);line-height:1.17}
+body[data-variant=vicina] .visit-content{grid-template-columns:1.1fr .9fr;gap:72px}
+body[data-variant=vicina] .visit-photo img{border-radius:8px 8px 64px 8px}
+@media(max-width:1100px){body[data-variant=vicina] .hero-grid{gap:36px}body[data-variant=vicina] .hero-image-wrap{height:520px}body[data-variant=vicina] .hero-actions .button{padding-inline:16px}body[data-variant=vicina] .visit-content{gap:32px}}
+@media(max-width:700px){body[data-variant=vicina] .hero-grid{grid-template-columns:1fr;gap:30px}body[data-variant=vicina] .hero-copy{grid-row:1}body[data-variant=vicina] .hero h1{font-size:clamp(42px,11.4vw,54px);max-width:14ch}body[data-variant=vicina] .hero-description{font-size:17px;max-width:40ch}body[data-variant=vicina] .hero-image-wrap{height:310px;border-top-left-radius:56px}body[data-variant=vicina] .hero-facts{gap:16px;margin-top:26px;padding-top:22px}body[data-variant=vicina] .hero-facts strong{font-size:17px}body[data-variant=vicina] .visit-content{grid-template-columns:1fr;gap:28px}body[data-variant=vicina] .section-heading h2,body[data-variant=vicina] .faq-grid h2{font-size:36px}}

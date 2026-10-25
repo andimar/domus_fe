@@ -1,0 +1,6 @@
+<footer class="domus-footer"><div class="domus-container domus-footer-grid">
+<section><h2>{{ footer.company.name }}</h2><p>PIVA {{ footer.company.vat }}</p></section>
+<section><h2>CONTATTI</h2><p>{{ footer.contacts.phone }}</p><p><a href="mailto:{{ footer.contacts.email }}">{{ footer.contacts.email }}</a></p>{% if footer.contacts.facebook_url %}<a href="{{ footer.contacts.facebook_url }}">Facebook</a>{% endif %}</section>
+<section><h2>INDIRIZZO</h2><p><strong>{{ footer.address.name }}</strong><br>{{ footer.address.street }}<br>{{ footer.address.city }}</p></section>
+<section><h2>AREA RISERVATA</h2><ul>{% for link in footer.links %}<li><a href="{{ link.url }}">{{ link.title }}</a></li>{% endfor %}</ul></section>
+</div></footer>

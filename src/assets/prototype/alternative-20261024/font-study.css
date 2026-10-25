@@ -1,0 +1,19 @@
+@font-face{font-family:Literata;src:url('assets/fonts/literata.ttf') format('truetype');font-weight:200 900;font-display:swap}
+@font-face{font-family:Newsreader;src:url('assets/fonts/newsreader.ttf') format('truetype');font-weight:200 800;font-display:swap}
+@font-face{font-family:Lora;src:url('assets/fonts/lora-variable.ttf') format('truetype');font-weight:400 700;font-display:swap}
+@font-face{font-family:'Source Sans 3';src:url('assets/fonts/source-sans-3.ttf') format('truetype');font-weight:200 900;font-display:swap}
+html[data-study-heading=newsreader]{--study-heading:Newsreader,Georgia,serif}
+html[data-study-heading=literata]{--study-heading:Literata,Georgia,serif}
+html[data-study-text=lora]{--study-text:Lora,Georgia,serif}
+html[data-study-text=lato]{--study-text:Lato,Arial,sans-serif}
+html[data-study-text=source]{--study-text:'Source Sans 3',Arial,sans-serif}
+html[data-study-price=titoli]{--study-price:var(--study-heading)}
+html[data-study-price=testi]{--study-price:var(--study-text)}
+html[data-study-price=georgia]{--study-price:Georgia,'Times New Roman',serif}
+:root[data-font-study] body{--serif:var(--study-heading);--font:var(--study-text);font-family:var(--study-text)}
+:root[data-font-study] :is(.hero h1,.section-heading h2,.opening-intro h2,.faq-grid h2,.service-desk h2,.transport-block h3,.route-options legend,.single-hero-grid h1,.single-section-heading h2){font-family:var(--study-heading);font-weight:400}
+/* The user's current request explicitly extends the font study into cards. */
+:root[data-font-study] body .package-card{--serif:var(--study-price);--font:var(--study-text);font-family:var(--study-text)}
+:root[data-font-study] body .package-card h3,:root[data-font-study] body .package-card h3 a{font-family:var(--study-text);font-weight:700}
+:root[data-font-study] body :is(.package-price,.booking-price,.single-price,.single-inline-price,[data-single-price],.booking-price>span,.single-inline-price>span){font-family:var(--study-price)}
+:root[data-font-study] body .booking-card h2{font-family:var(--study-text)}

@@ -1,0 +1,10 @@
+{% extends 'website-layout.twig' %}
+{% block content %}
+{% include 'website/hero-' ~ layout ~ '.twig' %}
+{% include 'website/pacchetti.twig' %}
+{% include 'website/visita.twig' %}
+{% include 'website/orari.twig' %}
+{% if faqs %}{% include 'website/domande.twig' %}{% endif %}
+{% if services %}{% include 'website/services.twig' %}{% endif %}
+{% include 'website/contatti.twig' %}
+{% endblock %}

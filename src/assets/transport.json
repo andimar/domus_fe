@@ -1,0 +1,102 @@
+[
+  {
+    "label": "Metro",
+    "lines": [
+      {
+        "id": "MEC",
+        "label": "C",
+        "href": "https://romamobile.it/paline/linea/MEC?nav=1"
+      }
+    ]
+  },
+  {
+    "label": "Tram e sostitutivi",
+    "lines": [
+      {
+        "id": "5",
+        "label": "5",
+        "href": "https://romamobile.it/paline/linea/5?nav=1"
+      },
+      {
+        "id": "19",
+        "label": "19",
+        "href": "https://www.atac.roma.it/tempo-reale/rete-tram--stato-del-servizio-aggiornato----tutte-le-info#:~:text=LINEA%2019"
+      },
+      {
+        "id": "19BUS",
+        "label": "19BUS",
+        "href": "https://romamobile.it/paline/linea/19BUS?nav=1"
+      },
+      {
+        "id": "19L",
+        "label": "19L",
+        "href": "https://romamobile.it/paline/linea/19L?nav=1"
+      }
+    ]
+  },
+  {
+    "label": "Bus",
+    "lines": [
+      {
+        "id": "213",
+        "label": "213",
+        "href": "https://romamobile.it/paline/linea/213?nav=1"
+      },
+      {
+        "id": "313",
+        "label": "313",
+        "href": "https://romamobile.it/paline/linea/313?nav=1"
+      },
+      {
+        "id": "412",
+        "label": "412",
+        "href": "https://romamobile.it/paline/linea/412?nav=1"
+      },
+      {
+        "id": "450",
+        "label": "450",
+        "href": "https://romamobile.it/paline/linea/450?nav=1"
+      },
+      {
+        "id": "542",
+        "label": "542",
+        "href": "https://romamobile.it/paline/linea/542?nav=1"
+      },
+      {
+        "id": "543",
+        "label": "543",
+        "href": "https://romamobile.it/paline/linea/543?nav=1"
+      },
+      {
+        "id": "544",
+        "label": "544",
+        "href": "https://romamobile.it/paline/linea/544?nav=1"
+      },
+      {
+        "id": "548",
+        "label": "548",
+        "href": "https://romamobile.it/paline/linea/548?nav=1"
+      },
+      {
+        "id": "552",
+        "label": "552",
+        "href": "https://romamobile.it/paline/linea/552?nav=1"
+      },
+      {
+        "id": "556",
+        "label": "556",
+        "href": "https://romamobile.it/paline/linea/556?nav=1"
+      },
+      {
+        "id": "558",
+        "label": "558",
+        "href": "https://romamobile.it/paline/linea/558?nav=1"
+      },
+      {
+        "id": "C5",
+        "label": "C5",
+        "href": "https://romamobile.it/paline/linea/C5?nav=1"
+      }
+    ]
+  }
+]

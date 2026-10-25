@@ -1,30 +1,10 @@
-<section class="stripe_section small">
-
-    <div class="boxed">
-        <div class="section-title">
-            <h3>Notizie</h3>
-        </div>
-
-        {% if mobile %}
-            <div class="grid scrollx news">
-                {% for card in articles|slice(0,4) %}
-                    <div class="col col-6 col-sm inline">
-                        {% include "templates/components/cards/card-news.twig" %}
-                    </div>
-                {% endfor %}
-            </div>
-        {% else %}
-            <div class="grid">
-                
-                    {% for card in articles|slice(0,6) %}
-                    <div class="col col-6 col-sm">
-                        {% include "templates/components/cards/card-news.twig" %}
-                    </div>
-                    {% endfor %}
-                
-            </div>
-        {% endif %}
-    </div>
-
-</section>
-
+{% if home.news.visible %}
+<section class="domus-news domus-container" id="offerte">
+<div class="domus-section-title"><h2>{{ home.news.title }}</h2><hr><p>{{ home.news.subtitle }}</p></div>
+<div class="domus-carousel" data-carousel>
+<div class="domus-news-grid" id="domus-news-items" tabindex="0" aria-label="Pacchetti e notizie">
+{% for post in home.news.items %}<article><h3><a href="{{ post.url }}">{{ post.title }}</a></h3>{% if post.image_html %}<a href="{{ post.url }}">{{ post.image_html|raw }}</a>{% endif %}<div class="domus-news-excerpt">{{ post.excerpt_html|raw }}</div><a class="domus-read-more" href="{{ post.url }}">Leggi di più <span aria-hidden="true">→</span></a></article>{% endfor %}
+</div>
+<div class="domus-carousel-controls"><button type="button" data-carousel-prev aria-controls="domus-news-items" aria-label="Pacchetti precedenti">prev</button><button type="button" data-carousel-next aria-controls="domus-news-items" aria-label="Pacchetti successivi">next</button></div>
+</div></section>
+{% endif %}

@@ -1,0 +1,14 @@
+{
+  "fonts": [
+    {
+      "name": "Lora",
+      "source": "https://github.com/google/fonts/tree/main/ofl/lora",
+      "license": "lora-OFL.txt"
+    },
+    {
+      "name": "DM Sans",
+      "source": "https://github.com/google/fonts/tree/main/ofl/dmsans",
+      "license": "dmsans-OFL.txt"
+    }
+  ]
+}

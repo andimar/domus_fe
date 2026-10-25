@@ -1,0 +1,52 @@
+/* Cut only the background, leaving text and photographs level and unclipped. */
+body:is([data-layout=obliqua],[data-layout=prospettive]) .package-card{background:#fbf8f2;border-color:#e2e8e8}
+body:is([data-layout=obliqua],[data-layout=prospettive]) .package-visual{position:relative;margin:0 calc(-1 * var(--package-padding)) 22px;isolation:isolate}
+body:is([data-layout=obliqua],[data-layout=prospettive]) .package-visual .package-media{margin:0;aspect-ratio:750/460}
+body:is([data-layout=obliqua],[data-layout=prospettive]) .package-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(8,29,42,.97),rgba(8,29,42,.82) 55%,transparent 100%);pointer-events:none;z-index:1}
+body:is([data-layout=obliqua],[data-layout=prospettive]) .package-visual h3{position:absolute;bottom:20px;left:var(--package-padding);right:var(--package-padding);margin:0;z-index:2;font-size:26px;line-height:1.18;color:#fff;text-wrap:balance}
+body:is([data-layout=obliqua],[data-layout=prospettive]) .package-visual h3 a{color:#fff}
+body:is([data-layout=obliqua],[data-layout=prospettive]) .package-visual h3 a:focus-visible{outline:3px solid #9addfa;outline-offset:5px}
+body[data-layout=prospettive] .package-visual::after{background:linear-gradient(to top,rgba(8,29,42,.25),transparent 80%)}
+body[data-layout=prospettive] .package-visual h3{bottom:0;left:0;right:0;padding:18px var(--package-padding);background:rgba(15,51,69,.94)}
+@media(max-width:980px){body:is([data-layout=obliqua],[data-layout=prospettive]) .package-visual h3{font-size:23px}}
+/* I: the actual photograph fades to transparency over the card's ivory surface. */
+body[data-layout=obliqua] .package-visual{padding-bottom:22px}
+body[data-layout=obliqua] .package-visual .package-media{background:transparent}
+body[data-layout=obliqua] .package-visual img{-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 42%,rgba(0,0,0,.35) 67%,transparent 88%);mask-image:linear-gradient(to bottom,#000 0%,#000 42%,rgba(0,0,0,.35) 67%,transparent 88%)}
+body[data-layout=obliqua] .package-visual::after{display:none}
+body[data-layout=obliqua] .package-visual h3{bottom:0;color:#153e50}
+body[data-layout=obliqua] .package-visual h3 a{color:#153e50}
+body[data-layout=obliqua] .package-visual h3 a:focus-visible{outline-color:#0876a6}
+body[data-layout=obliqua] .package-card{background:#edf7fc}
+body:is([data-layout=obliqua],[data-layout=prospettive])[data-page=home] :is(.hero,.visit-section,.opening-section,.faq-section,.laboratory-section){--edge:clamp(12px,2vw,28px);position:relative;isolation:isolate;background:transparent;padding-top:calc(56px + var(--edge));padding-bottom:calc(56px + var(--edge))}
+body:is([data-layout=obliqua],[data-layout=prospettive])[data-page=home] :is(.hero,.visit-section,.opening-section,.faq-section,.laboratory-section)::before{content:'';position:absolute;inset:0;z-index:-1;background:var(--section-fill);clip-path:polygon(0 var(--edge),100% 0,100% calc(100% - var(--edge)),0 100%);pointer-events:none}
+body:is([data-layout=obliqua],[data-layout=prospettive]) .hero{--section-fill:#e8f5fc}
+body:is([data-layout=obliqua],[data-layout=prospettive]) .visit-section{--section-fill:#153e50}
+body:is([data-layout=obliqua],[data-layout=prospettive]) .opening-section{--section-fill:#edf7fc}
+body:is([data-layout=obliqua],[data-layout=prospettive]) .faq-section{--section-fill:#fbf8f2}
+body:is([data-layout=obliqua],[data-layout=prospettive]) .laboratory-section{--section-fill:#f3f8fb}
+body:is([data-layout=obliqua],[data-layout=prospettive]) .visit-content{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center}
+body:is([data-layout=obliqua],[data-layout=prospettive]) figure{margin:0}
+body:is([data-layout=obliqua],[data-layout=prospettive]) .visit-photo img{display:block;width:100%;height:410px;object-fit:cover;object-position:50% 45%;border-radius:14px}
+body:is([data-layout=obliqua],[data-layout=prospettive]) .visit-steps{display:flex;flex-direction:column;gap:28px}
+body:is([data-layout=obliqua],[data-layout=prospettive]) .visit-steps li{padding:0}
+body:is([data-layout=obliqua],[data-layout=prospettive]) .visit-steps h3{margin-bottom:8px}
+body:is([data-layout=obliqua],[data-layout=prospettive]) .visit-steps p{margin:0;max-width:48ch}
+body:is([data-layout=obliqua],[data-layout=prospettive]) .faq-photo{margin-top:32px}
+body:is([data-layout=obliqua],[data-layout=prospettive]) .faq-photo img{display:block;width:100%;height:260px;object-fit:cover;border-radius:14px}
+body[data-layout=prospettive] .visit-section{--section-fill:#edf7fc;color:#213e4c}
+body[data-layout=prospettive] .visit-section :is(h2,h3,.text-button,.visit-steps p){color:#213e4c}
+body[data-layout=prospettive] .opening-section{--section-fill:#fbf8f2}
+body[data-layout=prospettive] .faq-section{--section-fill:#e8f5fc}
+body[data-layout=prospettive] .contact-section{background:#153e50;color:#fff}
+body[data-layout=prospettive] .contact-section :is(h2,h3,.contact-intro p){color:#fff}
+body[data-layout=prospettive] .contact-section .address-content :is(h3,p){color:#213e4c}
+body[data-layout=prospettive] .contact-section .button-light{background:#fbf8f2;color:#153e50}
+@media(max-width:980px){body:is([data-layout=obliqua],[data-layout=prospettive]) .visit-content{gap:32px}}
+@media(max-width:700px){body:is([data-layout=obliqua],[data-layout=prospettive])[data-page=home] :is(.hero,.visit-section,.opening-section,.faq-section,.laboratory-section){padding-top:calc(38px + var(--edge));padding-bottom:calc(38px + var(--edge))}body:is([data-layout=obliqua],[data-layout=prospettive]) .visit-content{grid-template-columns:1fr;gap:28px}body:is([data-layout=obliqua],[data-layout=prospettive]) .visit-photo img{height:280px}body:is([data-layout=obliqua],[data-layout=prospettive]) .faq-photo img{height:230px}body:is([data-layout=obliqua],[data-layout=prospettive]) .hero-actions{gap:12px}body:is([data-layout=obliqua],[data-layout=prospettive]) .hero-actions .button{font-size:14px;padding-inline:16px;gap:10px}body:is([data-layout=obliqua],[data-layout=prospettive]) .hero-actions .text-button{font-size:14px;min-height:44px}}
+@media(max-width:370px){body:is([data-layout=obliqua],[data-layout=prospettive]) .hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px}body:is([data-layout=obliqua],[data-layout=prospettive]) .hero-actions .button{grid-column:1/-1;justify-self:start}}
+body[data-layout=obliqua][data-page=home] :is(.hero,.visit-section,.opening-section,.faq-section,.laboratory-section){padding-bottom:56px}
+body[data-layout=obliqua][data-page=home] :is(.hero,.visit-section,.opening-section,.faq-section,.laboratory-section)::before{clip-path:polygon(0 var(--edge),100% 0,100% 100%,0 100%)}
+body[data-layout=prospettive][data-page=home] :is(.hero,.visit-section,.opening-section,.faq-section,.laboratory-section){padding-top:56px}
+body[data-layout=prospettive][data-page=home] :is(.hero,.visit-section,.opening-section,.faq-section,.laboratory-section)::before{clip-path:polygon(0 0,100% 0,100% calc(100% - var(--edge)),0 100%)}
+@media(max-width:700px){body[data-layout=obliqua][data-page=home] :is(.hero,.visit-section,.opening-section,.faq-section,.laboratory-section){padding-bottom:38px}body[data-layout=prospettive][data-page=home] :is(.hero,.visit-section,.opening-section,.faq-section,.laboratory-section){padding-top:38px}}
