@@ -1,0 +1,16 @@
+<dialog class="notification-panel" id="notifications" aria-labelledby="notifications-title">
+  <div class="panel-heading"><h2 id="notifications-title">Avvisi al pubblico</h2><button type="button" class="icon-button" data-close-dialog aria-label="Chiudi avvisi">{% include 'website/notice-close.twig' %}</button></div>
+  {% for alert in active_notices %}
+  <article class="notification-item"><h3>{{ alert.title }}</h3>{% if alert.date_label %}<p class="notice-dates">{{ alert.date_label }}</p>{% endif %}<p>{{ alert.summary }}</p><a class="text-button" href="{{ alert.url }}" data-notice-dialog="notice-{{ alert.id }}">Leggi l’avviso completo →</a></article>
+  {% else %}<div class="notification-empty"><h3>Nessun avviso attivo</h3><p>Le prossime comunicazioni del laboratorio compariranno qui.</p></div>{% endfor %}
+</dialog>
+{% for alert in active_notices %}
+<dialog class="notice-modal" id="notice-{{ alert.id }}" aria-labelledby="notice-title-{{ alert.id }}">
+  <div class="modal-close"><button type="button" class="icon-button" data-close-dialog aria-label="Chiudi dettaglio avviso">{% include 'website/notice-close.twig' %}</button></div>
+  <h2 id="notice-title-{{ alert.id }}">{{ alert.title }}</h2>
+  {% if alert.date_label %}<p class="notice-dates">{{ alert.date_label }}</p>{% endif %}
+  <div class="notice-body">{{ alert.content_html|raw }}</div>
+  <button type="button" class="button button-primary" data-read-notice="{{ alert.id }}-{{ alert.updated }}">Ho letto, chiudi avviso</button>
+</dialog>
+{% endfor %}
+<div class="sr-only" role="status" aria-live="polite" data-notice-status></div>

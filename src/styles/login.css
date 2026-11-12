@@ -1,0 +1,19 @@
+@font-face{font-family:'Source Sans 3';src:url('../assets/prototype/alternative-20261024/assets/fonts/source-sans-3.ttf') format('truetype');font-weight:200 900;font-display:swap}
+body.login{background:#eff9fd;color:#143f51;font-family:'Source Sans 3',Arial,sans-serif}
+.login #login{width:min(360px,calc(100% - 40px));padding:6vh 0 32px}
+.login h1 a{position:relative;width:100%;height:160px;margin:0 auto 28px;background-image:url('../assets/prototype/assets/brand/logo-tradizionale-simbolo.svg');background-position:center top;background-size:110px 110px;background-repeat:no-repeat}
+.login h1 a::after{content:'';position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:min(290px,100%);height:25px;background:url('../assets/prototype/assets/brand/logo-tradizionale-scritta.svg') center/contain no-repeat}
+.login form{margin-top:0;padding:28px;border:1px solid #c4e5f3;border-radius:12px;background:#fff;box-shadow:none}
+.login label{font-size:16px;color:#143f51}
+.login input[type=text],.login input[type=password]{min-height:46px;margin-top:5px;border-color:#83bbd3;border-radius:5px;color:#143f51;font-family:inherit;font-size:21px}
+.login input[type=checkbox]{border-color:#83bbd3}
+.login .button-primary{min-height:40px;padding-inline:20px;background:#007cae;border-color:#007cae;color:#fff;font-family:inherit;font-size:16px;font-weight:600;box-shadow:none;text-shadow:none;border-radius:5px}
+.login .button-primary:hover,.login .button-primary:focus{background:#00628c;border-color:#00628c}
+.login #nav,.login #backtoblog{padding-inline:0}
+.login #nav a,.login #backtoblog a,.login .privacy-policy-page-link a{color:#006a98;text-underline-offset:3px}
+.login a:focus-visible,.login button:focus-visible,.login input:focus-visible{outline:2px solid #007cae;outline-offset:3px;box-shadow:none}
+.login .message,.login .notice,.login #login_error{border:1px solid #83bbd3;border-radius:6px;box-shadow:none}
+.login #login_error{border-color:#b83b3b}
+.login .language-switcher select{border-color:#83bbd3;color:#143f51}
+.login ::selection{background:#c4eafa;color:#143f51}
+@media(max-height:720px){.login #login{padding-top:24px}.login h1 a{height:136px;background-size:90px 90px;margin-bottom:22px}}

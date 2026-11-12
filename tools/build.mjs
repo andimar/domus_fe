@@ -7,3 +7,5 @@ fs.copyFileSync('src/fonts.css','dist/fonts.css');
 if(fs.existsSync('src/assets')) fs.cpSync('src/assets','dist/assets',{recursive:true});
 
 fs.copyFileSync('src/styles/website.css','dist/styles/website.css');
+fs.copyFileSync('src/styles/login.css','dist/styles/login.css');
+fs.copyFileSync('src/styles/admin-editor.css','dist/styles/admin-editor.css');

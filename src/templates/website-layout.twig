@@ -4,8 +4,9 @@
 <body class="{{ body_classes }} domus-website" data-page="{{ page.type }}" data-layout="obliqua" data-variant="{{ layout }}">
 {{ wordpress.wp_body_open|raw }}<a class="skip-link" href="#contenuto">Vai al contenuto</a>
 {% include 'website/header.twig' %}
-{% if notice %}<aside class="notice-banner"><div class="container notice-inner"><div class="notice-copy"><p><strong>{{ notice.title }}</strong> {{ notice.date_label }}</p></div><a class="notice-details" href="{{ notice.url }}">Leggi avviso →</a></div></aside>{% endif %}
+{% for alert in active_notices %}<aside class="notice-banner" data-notice-banner="{{ alert.id }}-{{ alert.updated }}"{% if not loop.first %} hidden{% endif %}><div class="container notice-inner"><div class="notice-copy"><p><strong>{{ alert.title }}</strong></p></div><a class="notice-details" href="{{ alert.url }}" data-notice-dialog="notice-{{ alert.id }}">Leggi avviso →</a><button type="button" class="icon-button notice-dismiss" data-dismiss-notice="{{ alert.id }}-{{ alert.updated }}" aria-label="Nascondi avviso in evidenza">{% include 'website/notice-close.twig' %}</button></div></aside>{% endfor %}
 <main id="contenuto">{% block content %}{% endblock %}</main>
 {% include 'website/footer.twig' %}
+{% include 'website/notices.twig' %}
 {% if page.type == 'home' %}<script type="application/json" id="domus-photo-data">{{ photo_data_json|raw }}</script>{% endif %}
 {{ wordpress.wp_footer|raw }}</body></html>

@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-25T00:00:00+02:00",
+  "title": "Design System: Domus Medica",
+  "extensions": {
+    "sources": ["src/styles/website.css", "src/assets/prototype/styles.css", "src/assets/prototype/alternative-20261024/palettes.css", "src/assets/prototype/alternative-20261024/font-study.css", "src/templates/website-layout.twig"],
+    "breakpoints": [{"name":"mobile","value":"700px"},{"name":"intermediate","value":"980px"}],
+    "motion": [{"name":"button-state","value":"background .18s, transform .18s","purpose":"Stati dei pulsanti esistenti; rispettare prefers-reduced-motion."}],
+    "colorMeta": {
+      "brand-blue":{"role":"primary","displayName":"Azzurro Domus"},
+      "sand-faq":{"role":"secondary","displayName":"Oro chiarissimo FAQ"}
+    }
+  },
+  "components": [
+    {
+      "name":"Pulsante primario","kind":"button","refersTo":"button-primary",
+      "description":"Azione principale; snippet rappresentativo del componente corrente.",
+      "html":"<button class=\"ds-primary\">Scopri i pacchetti</button>",
+      "css":".ds-primary{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 24px;border:1px solid transparent;border-radius:6px;background:var(--blue-action,color-mix(in srgb,#009fe3 75%,black));color:white;font:700 14px/1.4 'Source Sans 3',Arial,sans-serif;transition:background .18s,transform .18s}.ds-primary:hover{background:var(--blue-link,color-mix(in srgb,#009fe3 66%,black))}.ds-primary:focus-visible{outline:2px solid var(--blue-link,#006996);outline-offset:4px}"
+    },
+    {
+      "name":"Pulsante secondario","kind":"button","description":"Azione secondaria su fondo bianco.",
+      "html":"<button class=\"ds-secondary\">Referti online</button>",
+      "css":".ds-secondary{min-height:52px;padding:14px 24px;border:1px solid var(--blue-border,color-mix(in srgb,#009fe3 28%,white));border-radius:6px;background:white;color:var(--blue-link,#006996);font:700 14px/1.4 'Source Sans 3',Arial,sans-serif}.ds-secondary:hover{background:var(--blue-06,#f0f9fd)}.ds-secondary:focus-visible{outline:2px solid var(--blue-link,#006996);outline-offset:4px}"
+    },
+    {
+      "name":"Titolo e prezzo pacchetto","kind":"card","description":"Ruoli tipografici distinti nella card; contenuto dimostrativo, nessuna tariffa inventata.",
+      "html":"<article class=\"ds-card\"><h3>Pacchetto di analisi</h3><p>Informazioni sugli esami inclusi.</p><span>Prezzo su richiesta</span></article>",
+      "css":".ds-card{padding:23px;background:var(--blue-10,#e5f5fc);border:1px solid var(--blue-18,#d1eefb);color:var(--blue-ink,#193c4b);font-family:'Source Sans 3',Arial,sans-serif}.ds-card h3{font-family:'Source Sans 3',Arial,sans-serif;font-weight:700}.ds-card span{font:600 18px/1.4 'Source Sans 3',Arial,sans-serif}"
+    },
+    {
+      "name":"FAQ trasparente","kind":"custom","description":"Riga nativa apribile sulla campitura di sezione.",
+      "html":"<section class=\"ds-faq\"><details><summary>Come mi preparo al prelievo?</summary><p>Chiedi al laboratorio le indicazioni specifiche.</p></details></section>",
+      "css":".ds-faq{padding:24px;background:#faf1d2;color:var(--blue-ink,#193c4b);font-family:'Source Sans 3',Arial,sans-serif}.ds-faq details{background:transparent}.ds-faq summary{cursor:pointer}.ds-faq summary:focus-visible{outline:2px solid var(--blue-link,#006996);outline-offset:4px}"
+    },
+    {
+      "name":"Titolo pagina contenuto","kind":"custom","description":"Gerarchia editoriale delle pagine di dettaglio.",
+      "html":"<h1 class=\"ds-heading\">Altri servizi.</h1>",
+      "css":".ds-heading{font:400 clamp(40px,4.6vw,64px)/1.12 Newsreader,Georgia,serif;letter-spacing:-.025em;margin:12px 0 24px;color:var(--blue-ink,#193c4b)}"
+    }
+  ],
+  "narrative": {
+    "overview":"Sistema editoriale del laboratorio a Centocelle, documentato dal frontend WordPress corrente il 25 ottobre 2026. Le decisioni approvate governano questa registrazione: leggibilità, informazioni pratiche e tono accogliente. Nessuna nuova direzione creativa è introdotta.",
+    "keyCharacteristics":["Tre layout approvati","Un solo azzurro di marca","Oro chiarissimo nelle FAQ","Footer scuro curvo condiviso"],
+    "rules":[],
+    "dos":["Conservare palette, ruoli tipografici e tre layout approvati.","Conservare focus visibile, adattamento mobile e riduzione del movimento.","Dichiarare le scene illustrative generate e consentirne la sostituzione con foto reali."],
+    "donts":["Non introdurre palette alternative, modalità scura o sfondi individuali nelle FAQ.","Non trasformare asset e varianti di studio storiche in nuove opzioni del prodotto."]
+  }
+}

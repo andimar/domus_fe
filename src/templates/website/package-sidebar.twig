@@ -1,0 +1,18 @@
+<aside class="package-sidebar" aria-labelledby="package-sidebar-title">
+  <h2 id="package-sidebar-title">Orari del laboratorio</h2>
+  <div class="package-sidebar-hours">
+    <h3>Prelievi</h3>
+    <dl><div><dt>Lun–ven</dt><dd>{{ hours.collection_weekdays_open }} – {{ hours.collection_weekdays_close }}</dd></div><div><dt>Sabato</dt><dd>{% if hours.saturday_closed %}Chiuso{% else %}{{ hours.collection_saturday_open }} – {{ hours.collection_saturday_close }}{% endif %}</dd></div></dl>
+    <h3>Ritiro referti <small>lunedì–venerdì</small></h3>
+    <dl><div><dt>Mattina</dt><dd>{{ hours.results_morning_open }} – {{ hours.results_morning_close }}</dd></div><div><dt>Pomeriggio</dt><dd>{{ hours.results_afternoon_open }} – {{ hours.results_afternoon_close }}</dd></div></dl>
+    {% if hours.hours_note %}<p class="package-sidebar-note">{{ hours.hours_note }}</p>{% endif %}
+  </div>
+  {% if active_notices %}<section class="package-sidebar-notices" aria-labelledby="package-sidebar-notices-title" data-sidebar-notices>
+    <h3 id="package-sidebar-notices-title">Avvisi in corso</h3>
+    {% for alert in active_notices %}<article class="package-sidebar-notice" data-notice-copy="{{ alert.id }}-{{ alert.updated }}">
+      <h4>{{ alert.title }}</h4>
+      {% if alert.date_label %}<p>{{ alert.date_label }}</p>{% endif %}
+      <a class="text-button" href="{{ alert.url }}" data-notice-dialog="notice-{{ alert.id }}">Leggi avviso →</a>
+    </article>{% endfor %}
+  </section>{% endif %}
+</aside>

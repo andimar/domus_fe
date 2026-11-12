@@ -1,0 +1,23 @@
+/* Keep classic-editor actions in flow, including Copy & Delete Posts links. */
+#submitdiv #major-publishing-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 12px;
+}
+
+#submitdiv #delete-action {
+    float: none !important;
+    width: auto !important;
+}
+
+/* Override the plugin's absolute positioning and reserve a row for saving. */
+#submitdiv #publishing-action {
+    position: static !important;
+    float: none !important;
+    flex-basis: 100%;
+}
+
+#submitdiv #major-publishing-actions > .clear {
+    display: none;
+}
